@@ -836,7 +836,7 @@ function toast(msg){const t=document.getElementById('toast');if(!t)return;t.text
 // ══ SERVICE WORKER REGISTRATION ══
 if('serviceWorker' in navigator){
   window.addEventListener('load',()=>{
-    navigator.serviceWorker.navigator.serviceWorker.register('/BraceBuddy/sw.js',{scope:'/BraceBuddy/'})
+    navigator.serviceWorker.register('/BraceBuddy/sw.js',{scope:'/BraceBuddy/'})
       .then(reg=>console.log('BraceBuddy SW registered:',reg.scope))
       .catch(err=>console.log('SW registration failed:',err));
   });
